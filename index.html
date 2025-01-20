@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Facts About Anime Lovers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fun Facts About Anime Lovers</h1>
+        <div id="fact-display">Click the button to see a fun fact!</div>
+        <button id="generate-button">Generate Another Fun Fact</button>
+    </div>
+    <script>
+        const funFacts = [
+            "This anime enthusiast has watched over 500 episodes of their favorite series.",
+            "They can name all the characters from their top 10 anime shows.",
+            "They have attended multiple anime conventions and cosplayed as their favorite characters.",
+            "Their favorite anime genre is shonen, but they also enjoy slice-of-life and fantasy.",
+            "They have a collection of over 100 anime figurines displayed in their room.",
+            "They often participate in online forums to discuss theories and character arcs.",
+            "They can speak a few phrases in Japanese, thanks to their love for anime.",
+            "They have a dedicated playlist of anime opening and ending songs that they listen to daily.",
+            "They enjoy drawing fan art of their favorite characters in their free time.",
+            "They have introduced several friends to anime, creating a small viewing group for binge-watching sessions."
+        ];
+
+        const factDisplay = document.getElementById('fact-display');
+        const generateButton = document.getElementById('generate-button');
+
+        generateButton.addEventListener('click', () => {
+            const randomIndex = Math.floor(Math.random() * funFacts.length);
+            factDisplay.textContent = funFacts[randomIndex];
+        });
+    </script>
+</body>
+</html>
